@@ -1,0 +1,53 @@
+@import "../vendor/bootstrap/scss/bootstrap";
+@import "../vendor/slick/slick/slick";
+
+.modal {
+    &-dialog {
+        max-width: 800px !important;
+    }
+}
+
+.slick {
+    &-list {
+        //padding: 25px 0;
+        @include media-breakpoint-down(md){
+            margin: 0 -15px;
+        }
+    }
+    &-slide {
+        //padding: 0 10px;
+        @include media-breakpoint-down(md){
+            //padding: 0 15px;
+        }
+
+        img {
+            width: inherit !important;
+            height: inherit !important; 
+        }
+    }
+    &-dots {
+        background-color: transparent;
+        li {
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 50%;
+            &.slick-active {
+                background-color: gray;
+            }
+        }
+    }
+
+    &-prev {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+    }
+    &-next {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 999;
+    }
+}
